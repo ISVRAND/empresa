@@ -1,12 +1,12 @@
 const CACHE_NAME = 'portafolio-cache-v1';
 const urlsToCache = [
-  '/PortafolioCristian/',
-  '/PortafolioCristian/index.html',
-  '/PortafolioCristian/styles.css',
-  '/PortafolioCristian/manifest.json',
-  '/PortafolioCristian/icons/icon-192.png',
-  '/PortafolioCristian/icons/icon-512.png',
-  '/PortafolioCristian/images/favicon-32x32.png',
+  '/www.isvrand.cl/',
+  '/www.isvrand.cl/index.html',
+  '/www.isvrand.cl/styles.css',
+  '/www.isvrand.cl/manifest.json',
+  '/www.isvrand.cl/icons/icon-192.png',
+  '/www.isvrand.cl/icons/icon-512.png',
+  '/www.isvrand.cl/images/favicon-32x32.png',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css'
 ];
 
