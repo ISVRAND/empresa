@@ -994,3 +994,36 @@ section h2::after {
   z-index: 999;
 }
 
+.banner {
+  background: linear-gradient(rgba(108, 78, 182, 0.8), rgba(108, 78, 182, 0.8)),
+              url('images/banner-fondo.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.banner-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.banner-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-banner {
+  background-color: #ffffff;
+  color: #6c4eb6;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-banner:hover {
+  background-color: #6c4eb6;
+  color: #ffffff;
+}
