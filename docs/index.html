@@ -9,13 +9,16 @@
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="images/favicon-32x32.png">
   <!-- En el <head> -->
 
-
+  <script type="module" src="js/main.js"></script>
   <script type="module" src="firebase.js"></script>
-
 
 
   <meta name="theme-color" content="#6c4eb6">
@@ -26,7 +29,7 @@
 
 <body>
   <header class="navbar">
-    <div class="logo">Isvrand</span></div>
+    <div class="logo">Isvrand</div>
 
     <button class="menu-toggle" aria-label="Abrir menú">☰</button>
 
@@ -47,220 +50,299 @@
 
 
 
+  <main>
 
 
+    <section class="hero" id="inicio">
+      <h1>Hola, <span>Bienvenido a ISVRAND</span></h1>
+      <p>Damos forma a sueños que comienzan como ideas, transformándolos en marcas inolvidables.</p>
+      <a href="#sobre-mi" class="btn-primary">Nuestra Propuesta de Valor</a>
+    </section>
 
-  <section class="hero" id="inicio">
-    <h1>Hola, <span>Bienvenido a ISVRAND</span></h1>
-    <p>Damos forma a sueños que comienzan como ideas, transformándolos en marcas inolvidables.</p>
-    <a href="#sobre-mi" class="btn-primary">Nuestra Propuesta de Valor</a>
-  </section>
-
-  <section id="sobre-mi" class="sobre-mi">
-    <div class="container">
-      <div class="contenido">
-        <div class="ilustracion">
-          <div class="emoji-circle">🚀</div>
-        </div>
-        <div class="texto">
-          <div class="titulo-sobremi">
-            <h2>¿Quiénes Somos?</h2>
+    <div class="sobre-mi" data-aos="fade-down">
+      <div class="container">
+        <div class="contenido">
+          <div class="ilustracion">
+            <div class="emoji-circle">🚀</div>
           </div>
-          <br />
-          <p style="margin-top: 2rem;">
-            ISVRAND by ISVRAIS es una consultora especializada en branding estratégico, diseño y marketing digital,
-            creada para transformar ideas en marcas sólidas, coherentes y memorables.
-          </p>
-          <p>
-            Creemos que una marca no es solo un logo, sino una identidad poderosa que inspira, conecta y genera impacto.
-            Por eso, acompañamos a emprendedores y empresas en cada etapa, desde la idea inicial hasta su implementación
-            en el mercado, asegurando un crecimiento alineado a propósito y resultados reales.
-          </p>
-          <p>
-            Nuestro enfoque combina creatividad, análisis de mercado y estrategia, diseñando soluciones adaptadas a cada
-            proyecto, fortaleciendo el posicionamiento y construyendo marcas auténticas que perduren en el tiempo.
-          </p>
-          <p>
-            En ISVRAND, creemos en el poder de una buena idea. Creemos en ti.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-  <section id="servicios" class="servicios">
-    <div class="container">
-      <h2>Nuestros Servicios</h2>
-      <div style="margin-top: 3cm;" class="cards">
-        <div class="card">
-          <div class="icono-svg">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#5A2A83" stroke-width="2" viewBox="0 0 24 24">
-              <path d="M12 19l-7-7 7-7 7 7-7 7z"></path>
-            </svg>
-          </div>
-          <h3>Estrategia de Marca</h3>
-          <p>Definimos el ADN de tu marca: propósito, personalidad, posicionamiento y propuesta de valor para
-            diferenciarte y crecer.</p>
-        </div>
-
-        <div class="card">
-          <div class="icono-svg">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#5A2A83" stroke-width="2" viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M12 6v6l4 2"></path>
-            </svg>
-          </div>
-          <h3>Identidad Visual</h3>
-          <p>Diseñamos logotipos, paletas de colores y tipografías que representan la esencia de tu marca de forma
-            coherente y profesional.</p>
-        </div>
-
-        <div class="card">
-          <div class="icono-svg">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#5A2A83" stroke-width="2" viewBox="0 0 24 24">
-              <path d="M4 4h16v16H4z"></path>
-              <path d="M4 9h16"></path>
-            </svg>
-          </div>
-          <h3>Diseño Publicitario</h3>
-          <p>Creación de piezas gráficas para redes sociales, campañas y promociones, combinando estética con
-            estrategia.</p>
-        </div>
-
-        <div class="card">
-          <div class="icono-svg">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#5A2A83" stroke-width="2" viewBox="0 0 24 24">
-              <path d="M4 4h16v12H4z"></path>
-              <path d="M22 18H2"></path>
-            </svg>
-          </div>
-          <h3>Desarrollo Web</h3>
-          <p>Diseño y desarrollo de sitios web modernos y funcionales, alineados a tu identidad de marca para potenciar
-            tu presencia online.</p>
-        </div>
-
-        <div class="card">
-          <div class="icono-svg">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#5A2A83" stroke-width="2" viewBox="0 0 24 24">
-              <path d="M2 12l1.5-1.5L12 2l8.5 8.5L22 12l-2 2v8h-4v-6h-4v6H6v-8z"></path>
-            </svg>
-          </div>
-          <h3>Asesoría a Emprendedores</h3>
-          <p>Acompañamiento desde la idea hasta la implementación, con herramientas y estrategia para lanzar y
-            posicionar tu negocio.</p>
-        </div>
-
-        <div class="card">
-          <div class="icono-svg">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#5A2A83" stroke-width="2" viewBox="0 0 24 24">
-              <path d="M3 3h18v18H3z"></path>
-              <path d="M3 9h18"></path>
-            </svg>
-          </div>
-          <h3>Marketing Digital</h3>
-          <p>Estrategias de SEO, publicidad online y analítica para impulsar tu marca y conectar con tu audiencia.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-  <section id="proyectos" class="proyectos">
-    <div class="container">
-      <h2>Proyectos</h2>
-      <div class="cards">
-        <div class="card proyecto">
-          <img src="images/SunorPortafolio.png" alt="Proyecto E-commerce Sunor" class="imagen-proyecto">
-          <div class="contenido-card">
-            <h3>Plataforma E-commerce - Sunor</h3>
-            <p class="descripcion">
-              Sitio web de comercio electrónico desarrollado para una tienda chilena. Incluye sistema de cotizacion,
-              visualizacion de servicios, ubicacion y contacto.
+          <div class="texto">
+            <div class="titulo-sobremi">
+              <h2>¿Quiénes Somos?</h2>
+            </div>
+            <br />
+            <p style="margin-top: 2rem;">
+              ISVRAND by ISVRAIS es una consultora especializada en branding estratégico, diseño y marketing digital,
+              creada para transformar ideas en marcas sólidas, coherentes y memorables.
             </p>
-            <p class="tecnologias"><strong>Tecnologías:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
-            <div class="botones">
-              <a href="https://sunor.cl" target="_blank" class="btn">Visitar página web</a>
+            <p>
+              Creemos que una marca no es solo un logo, sino una identidad poderosa que inspira, conecta y genera
+              impacto.
+              Por eso, acompañamos a emprendedores y empresas en cada etapa, desde la idea inicial hasta su
+              implementación
+              en el mercado, asegurando un crecimiento alineado a propósito y resultados reales.
+            </p>
+            <p>
+              Nuestro enfoque combina creatividad, análisis de mercado y estrategia, diseñando soluciones adaptadas a
+              cada
+              proyecto, fortaleciendo el posicionamiento y construyendo marcas auténticas que perduren en el tiempo.
+            </p>
+            <p>
+              En ISVRAND, creemos en el poder de una buena idea. Creemos en ti.
+            </p>
+          </div>
+        </div>
+      </div>
+      </section>
 
+
+
+
+      <section id="servicios" class="servicios">
+        <div class="container">
+          <h2 data-aos="fade-up">Nuestros Servicios</h2>
+          <div style="margin-top: 3cm;" class="cards">
+
+            <div class="card" data-aos="zoom-in" data-aos-delay="0">
+              <div class="icono-svg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#5A2A83" stroke-width="2"
+                  viewBox="0 0 24 24">
+                  <path d="M12 19l-7-7 7-7 7 7-7 7z"></path>
+                </svg>
+              </div>
+              <h3>Estrategia de Marca</h3>
+              <p>Definimos el ADN de tu marca: propósito, personalidad, posicionamiento y propuesta de valor para
+                diferenciarte y crecer.</p>
+            </div>
+
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+              <div class="icono-svg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#5A2A83" stroke-width="2"
+                  viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 6v6l4 2"></path>
+                </svg>
+              </div>
+              <h3>Identidad Visual</h3>
+              <p>Diseñamos logotipos, paletas de colores y tipografías que representan la esencia de tu marca de forma
+                coherente y profesional.</p>
+            </div>
+
+            <div class="card" data-aos="zoom-in" data-aos-delay="200">
+              <div class="icono-svg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#5A2A83" stroke-width="2"
+                  viewBox="0 0 24 24">
+                  <path d="M4 4h16v16H4z"></path>
+                  <path d="M4 9h16"></path>
+                </svg>
+              </div>
+              <h3>Diseño Publicitario</h3>
+              <p>Creación de piezas gráficas para redes sociales, campañas y promociones, combinando estética con
+                estrategia.</p>
+            </div>
+
+            <div class="card" data-aos="zoom-in" data-aos-delay="300">
+              <div class="icono-svg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#5A2A83" stroke-width="2"
+                  viewBox="0 0 24 24">
+                  <path d="M4 4h16v12H4z"></path>
+                  <path d="M22 18H2"></path>
+                </svg>
+              </div>
+              <h3>Desarrollo Web</h3>
+              <p>Diseño y desarrollo de sitios web modernos y funcionales, alineados a tu identidad de marca para
+                potenciar tu presencia online.</p>
+            </div>
+
+            <div class="card" data-aos="zoom-in" data-aos-delay="400">
+              <div class="icono-svg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#5A2A83" stroke-width="2"
+                  viewBox="0 0 24 24">
+                  <path d="M2 12l1.5-1.5L12 2l8.5 8.5L22 12l-2 2v8h-4v-6h-4v6H6v-8z"></path>
+                </svg>
+              </div>
+              <h3>Asesoría a Emprendedores</h3>
+              <p>Acompañamiento desde la idea hasta la implementación, con herramientas y estrategia para lanzar y
+                posicionar tu negocio.</p>
+            </div>
+
+            <div class="card" data-aos="zoom-in" data-aos-delay="500">
+              <div class="icono-svg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#5A2A83" stroke-width="2"
+                  viewBox="0 0 24 24">
+                  <path d="M3 3h18v18H3z"></path>
+                  <path d="M3 9h18"></path>
+                </svg>
+              </div>
+              <h3>Marketing Digital</h3>
+              <p>Estrategias de SEO, publicidad online y analítica para impulsar tu marca y conectar con tu audiencia.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- ----------------------------------------
+     Sección de pestañas (antes “servicios-categorias”)
+---------------------------------------- -->
+      <section id="servicios-detalle" class="servicios-categorias">
+        <div class="container">
+
+          <!-- Encabezado -->
+          <div class="section-header">
+            <h2 class="title">Nuestros Servicio<span>S</span></h2>
+            <p class="subtitle">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+            </p>
+          </div>
+
+          <!-- Pestañas -->
+          <div class="tabs"  data-aos-delay="200">
+            <button class="tab active" onclick="showTab(0)">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+            <button class="tab" onclick="showTab(1)">
+              <i class="fas fa-laptop"></i>
+            </button>
+            <button class="tab" onclick="showTab(2)">
+              <i class="fas fa-code"></i>
+            </button>
+            <button class="tab" onclick="showTab(3)">
+              <i class="fas fa-th-large"></i>
+            </button>
+            <button class="tab" onclick="showTab(4)">
+              <i class="fas fa-image"></i>
+            </button>
+          </div>
+
+          <div class="tab-content">
+            <!-- Tab 0 -->
+            <div class="content active">
+              <div class="detalle">
+                <div class="texto">
+                  <h5>Estrategia de Marca</h5>
+                  <div class="line"></div>
+                  <p>Definimos el ADN de tu marca: propósito, personalidad, posicionamiento y propuesta de valor para
+                    diferenciarte.</p>
+                  <p class="extra">Te acompañamos desde la idea hasta la implementación estratégica de tu negocio.</p>
+                </div>
+                <div class="imagen">
+                  <img src="images/serviciosCategorias/01.jpg" alt="Estrategia de Marca">
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 1 -->
+            <div class="content">
+              <div class="detalle">
+                <div class="texto">
+                  <h5>Identidad Visual</h5>
+                  <div class="line"></div>
+                  <p>Diseñamos logotipos, paletas de colores y tipografías que representan la esencia de tu marca de
+                    forma coherente.</p>
+                  <p class="extra">Coherencia visual en todos tus canales digitales e impresos.</p>
+                </div>
+                <div class="imagen">
+                  <img src="images/serviciosCategorias/02.jpg" alt="Identidad Visual">
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 2 -->
+            <div class="content">
+              <div class="detalle">
+                <div class="texto">
+                  <h5>Diseño Publicitario</h5>
+                  <div class="line"></div>
+                  <p>Diseñamos piezas gráficas para redes sociales y campañas, combinando estética con estrategia.</p>
+                  <p class="extra">Diseños adaptados a cada plataforma con foco en conversión.</p>
+                </div>
+                <div class="imagen">
+                  <img src="images/serviciosCategorias/03.jpg" alt="Diseño Publicitario">
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 3 -->
+            <div class="content">
+              <div class="detalle">
+                <div class="texto">
+                  <h5>Desarrollo Web</h5>
+                  <div class="line"></div>
+                  <p>Diseño y desarrollo de sitios web modernos y funcionales, alineados a tu identidad de marca.</p>
+                  <p class="extra">Páginas responsivas, rápidas y optimizadas para SEO.</p>
+                </div>
+                <div class="imagen">
+                  <img src="images/serviciosCategorias/04.jpg" alt="Desarrollo Web">
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 4 -->
+            <div class="content">
+              <div class="detalle">
+                <div class="texto">
+                  <h5>Marketing Digital</h5>
+                  <div class="line"></div>
+                  <p>SEO, publicidad online y analítica para posicionar tu marca y conectar con tu audiencia.</p>
+                  <p class="extra">Campañas efectivas con resultados medibles en redes y Google.</p>
+                </div>
+                <div class="imagen">
+                  <img src="images/serviciosCategorias/05.jpg" alt="Marketing Digital">
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="proyectos" class="proyectos">
-    <h2>Proyecto en Sunor</h2>
-    <div class="carrusel">
-      <div class="carrusel-track">
-        <div class="proyecto-card">
-          <img src="images/SunorPortafolio.png" alt="Proyecto 1">
-          <h3>Biografia de empresa</h3>
-          <p>Informacion breve y precisa de servicios y trayectoria.</p>
-        </div>
-        <!-- Puedes duplicar esto para más proyectos -->
-        <div class="proyecto-card">
-          <img src="images/SunorProductos.png" alt="Proyecto 1">
-          <h3>Productos</h3>
-          <p>Pagina de presentacion de productos con su descripcion y funcion de cotizacion directamente a su correo.
-          </p>
-        </div>
-
-        <!-- Puedes duplicar esto para más proyectos -->
-        <div class="proyecto-card">
-          <img src="images/ContactoSunor.png" alt="Proyecto 1">
-          <h3>Metodo de contacto</h3>
-          <p>Presentacion minimalista de metodo de contacto, con formulario para envio a su correo, junto a
-            implemntacion de google maps para ver el lugar fisico de la empresa.</p>
-        </div>
-      </div>
-      <button class="carrusel-prev">&#10094;</button>
-      <button class="carrusel-next">&#10095;</button>
-    </div>
-  </section>
-
-  <section id="contacto" class="contacto">
-    <div class="container">
-      <h2>Contáctanos</h2>
-      <form id="contactForm" class="formulario-contacto">
-        <div>
-          <input type="text" id="nombre" placeholder="Nombre*">
-          <small id="error-nombre" class="error-texto"></small>
-        </div>
-        <div>
-          <input type="email" id="email" placeholder="Email*">
-          <small id="error-email" class="error-texto"></small>
-        </div>
-        <div>
-          <input type="text" id="empresa" placeholder="Nombre de la empresa*">
-          <small id="error-empresa" class="error-texto"></small>
-        </div>
-        <div class="input-con-prefijo">
-          <span class="prefijo-telefono">+569</span>
-          <input type="text" id="telefono" placeholder="Teléfono*" maxlength="8">
-          <small id="error-telefono" class="error-texto"></small>
-        </div>
-        <div>
-          <textarea id="mensaje" placeholder="Mensaje*" rows="5"></textarea>
-          <small id="error-mensaje" class="error-texto"></small>
-        </div>
-        <button type="submit" class="btn-enviar">Enviar</button>
-        <div id="mensajeExito" class="mensaje-exito">✅ ¡Mensaje enviado correctamente!</div>
-
-
-      </form>
-    </div>
-  </section>
 
 
 
 
 
 
+
+
+
+          <section id="contacto" class="contacto">
+            <div class="container">
+              <h2>Contáctanos</h2>
+              <form id="contactForm" class="formulario-contacto">
+                <div>
+                  <input type="text" id="nombre" placeholder="Nombre*">
+                  <small id="error-nombre" class="error-texto"></small>
+                </div>
+                <div>
+                  <input type="email" id="email" placeholder="Email*">
+                  <small id="error-email" class="error-texto"></small>
+                </div>
+                <div>
+                  <input type="text" id="empresa" placeholder="Nombre de la empresa*">
+                  <small id="error-empresa" class="error-texto"></small>
+                </div>
+                <div class="input-con-prefijo">
+                  <span class="prefijo-telefono">+569</span>
+                  <input type="text" id="telefono" placeholder="Teléfono*" maxlength="8">
+                  <small id="error-telefono" class="error-texto"></small>
+                </div>
+                <div>
+                  <textarea id="mensaje" placeholder="Mensaje*" rows="5"></textarea>
+                  <small id="error-mensaje" class="error-texto"></small>
+                </div>
+                <button type="submit" class="btn-enviar">Enviar</button>
+                <div id="mensajeExito" class="mensaje-exito">✅ ¡Mensaje enviado correctamente!</div>
+
+
+              </form>
+            </div>
+
+
+          </section>
+
+
+
+  </main>
 
   <footer class="footer">
     <div class="footer-container">
@@ -278,57 +360,33 @@
       <p class="footer-copy">&copy; 2025 ISVRAND · Todos los derechos reservados</p>
     </div>
   </footer>
-
-
-
-  <script>
-    const btn = document.getElementById('modo-btn');
-    btn.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      const isDark = document.body.classList.contains('dark');
-      btn.innerHTML = isDark
-        ? '<i class="fas fa-moon"></i> <span>Oscuro</span>'
-        : '<i class="fas fa-sun"></i> <span>Claro</span>';
-    });
-  </script>
-  <script>
-    const track = document.querySelector('.carrusel-track');
-    const prev = document.querySelector('.carrusel-prev');
-    const next = document.querySelector('.carrusel-next');
-    let index = 0;
-
-    next.addEventListener('click', () => {
-      index = (index + 1) % track.children.length;
-      track.style.transform = `translateX(-${index * 100}%)`;
-    });
-
-    prev.addEventListener('click', () => {
-      index = (index - 1 + track.children.length) % track.children.length;
-      track.style.transform = `translateX(-${index * 100}%)`;
-    });
-  </script>
-  <script>
-    const menuBtn = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    menuBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-  </script>
-
-
-
-
-
-
   <button id="btn-instalar" style="display:none">Instalar App</button>
-
   <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" id="btnSubir">
     <i class="fas fa-arrow-up"></i>
   </button>
 
+  <script>
+
+    function showTab(index) {
+      const tabs = document.querySelectorAll('.tab');
+      const contents = document.querySelectorAll('.tab-content .content');
+      tabs.forEach((tab, i) => {
+        tab.classList.toggle('active', i === index);
+        contents[i].classList.toggle('active', i === index);
+      });
+    }
+  </script>
+
 
   <div id="notificacion" class="notificacion"></div>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1100, // duración de animaciones
+      once: true,     // solo animar una vez al hacer scroll
+    });
+  </script>
 
 </body>
 
