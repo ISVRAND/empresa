@@ -7,20 +7,8 @@ btn.addEventListener("click", () => {
     : '<i class="fas fa-sun"></i> <span>Claro</span>';
 });
 
-const track = document.querySelector(".carrusel-track");
-const prev = document.querySelector(".carrusel-prev");
-const next = document.querySelector(".carrusel-next");
-let index = 0;
 
-next.addEventListener("click", () => {
-  index = (index + 1) % track.children.length;
-  track.style.transform = `translateX(-${index * 100}%)`;
-});
 
-prev.addEventListener("click", () => {
-  index = (index - 1 + track.children.length) % track.children.length;
-  track.style.transform = `translateX(-${index * 100}%)`;
-});
 
 const menuBtn = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
