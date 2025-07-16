@@ -6,21 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bienvenido a ISVRAND</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- AOS CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- ===== FontAwesome, Swiper y AOS CSS ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <!-- ===== Tus estilos ===== -->
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" type="image/png" href="images/favicon-32x32.png">
-  <!-- En el <head> -->
+  <link rel="stylesheet" href="css/styleCarousel.css" />
+  <link rel="stylesheet" href="css/styleTeam.css" />
 
-  <script type="module" src="js/main.js"></script>
-  <script type="module" src="firebase.js"></script>
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png" />
 
-
-  <meta name="theme-color" content="#6c4eb6">
-
-
-
+  <!-- ===== EmailJS (solo el SDK y tu Public Key) ===== -->
+  <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+  <script>
+    emailjs.init("kVTIbeoyZLQ7Dpumj");
+  </script>
+  <meta name="theme-color" content="#6c4eb6" />
 </head>
 
 <body>
@@ -178,10 +181,8 @@
         </div>
       </section>
 
-
-
       <!-- ----------------------------------------
-     Sección de pestañas (antes “servicios-categorias”)
+Sección de pestañas 
 ---------------------------------------- -->
       <section id="servicios-detalle" class="servicios-categorias">
         <div class="container">
@@ -295,35 +296,63 @@
 
 
 
+          <!-- Sección Proyectos: aquí va el carrusel -->
+          <section id="proyectos" class="proyectos-carousel" data-aos="fade-up">
+            <div class="container">
+              <h2>Proyectos</h2>
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <!-- Repite este bloque por cada proyecto -->
+                  <div class="swiper-slide">
+                    <img src="images/Slider/01.jpg">
+                    <div class="slide-caption">Nombre de Proyecto 1</div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/Slider/02.jpg" alt="Proyecto 2">
+                    <div class="slide-caption">Nombre de Proyecto 2</div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/Slider/03.jpg" alt="Proyecto 3">
+                    <div class="slide-caption">Nombre de Proyecto 3</div>
+                  </div>
+                  <!-- …más slides según necesites… -->
+                </div>
+                <!-- Paginación y flechas -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </section>
 
 
 
 
 
-
+          <div id="notificacion" class="notificacion"></div>
           <section id="contacto" class="contacto">
             <div class="container">
               <h2>Contáctanos</h2>
               <form id="contactForm" class="formulario-contacto">
                 <div>
-                  <input type="text" id="nombre" placeholder="Nombre*">
+                  <input type="text" id="nombre" name="from_name" placeholder="Nombre*">
                   <small id="error-nombre" class="error-texto"></small>
                 </div>
                 <div>
-                  <input type="email" id="email" placeholder="Email*">
+                  <input type="email" id="email" name="from_email" placeholder="Email*">
                   <small id="error-email" class="error-texto"></small>
                 </div>
                 <div>
-                  <input type="text" id="empresa" placeholder="Nombre de la empresa*">
+                  <input type="text" id="empresa" name="empresa" placeholder="Nombre de la empresa*">
                   <small id="error-empresa" class="error-texto"></small>
                 </div>
                 <div class="input-con-prefijo">
                   <span class="prefijo-telefono">+569</span>
-                  <input type="text" id="telefono" placeholder="Teléfono*" maxlength="8">
+                  <input type="text" id="telefono" name="telefono" placeholder="Teléfono*" maxlength="8">
                   <small id="error-telefono" class="error-texto"></small>
                 </div>
                 <div>
-                  <textarea id="mensaje" placeholder="Mensaje*" rows="5"></textarea>
+                  <textarea id="mensaje" name="message" placeholder="Mensaje*" rows="5"></textarea>
                   <small id="error-mensaje" class="error-texto"></small>
                 </div>
                 <button type="submit" class="btn-enviar">Enviar</button>
@@ -358,33 +387,26 @@
   </footer>
 
 
+  <!-- 1) Swiper JS (necesario para que tu carrusel funcione) -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-  <script>
-    function showTab(index) {
-      const tabs = document.querySelectorAll('.tab');
-      const contents = document.querySelectorAll('.tab-content .content');
-
-      tabs.forEach((tab, i) => {
-        tab.classList.toggle('active', i === index);
-        contents[i].classList.toggle('active', i === index);
-      });
-    }
-
-    // Mostrar primera pestaña por defecto (opcional)
-    document.addEventListener('DOMContentLoaded', () => {
-      showTab(0);
-    });
-  </script>
-
-
-
-  <div id="notificacion" class="notificacion"></div>
-  <!-- AOS JS -->
+  <!-- 2) AOS JS (para las animaciones on-scroll) -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- 3) Inicialización de tu carrusel: -->
+  <script src="js/carousel.js"></script>
+
+  <!-- 5) Firebase + Firestore (módulo ES) -->
+  <script type="module" src="firebase.js"></script>
+
+  <!-- 6) Tu lógica principal (modo oscuro, menú, validación, envío) -->
+  <script type="module" src="js/main.js"></script>
+
+  <!-- 7) AOS Init (puedes también moverlo a team.js si lo prefieres) -->
   <script>
     AOS.init({
-      duration: 1100, // duración de animaciones
-      once: true,     // solo animar una vez al hacer scroll
+      duration: 1100,
+      once: true,
     });
   </script>
 
