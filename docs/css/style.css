@@ -26,23 +26,23 @@ body {
 }
 /*for-section-text-start-here*/
 ::selection {
- background: #e73131; /* WebKit/Blink Browsers */
+ background: #B76E79; /* WebKit/Blink Browsers */
  color:#fff;
 }
 ::-webkit-selection {
-background-color: #e73131;
+background-color: #B76E79;
 color: #FFF;
 }
 ::-ms-selection {
-background-color: #e73131;
+background-color: #B76E79;
 color: #FFF;
 }
 ::-o-selection {
-background-color: #e73131;
+background-color: #B76E79;
 color: #FFF;
 }
 ::-moz-selection {
-background-color: #e73131;
+background-color: #B76E79;
 color: #FFF;
 }
 /* ========================================================================
@@ -165,13 +165,13 @@ strong {
 	font-weight:bolder;
 }
 span {
-	color:#e73131;
+	color:#B76E79;
 }
 .space {
 	margin:30px 0px;
 }
 .line {
-	border:1px solid #e73131;
+	border:1px solid #B76E79;
 	width:15%;
 }
 a:hover, a:focus {
@@ -189,7 +189,7 @@ a.btn-down {
 }
 a.btn-down:hover {
 	background:#fff;
-	color:#e73131;
+	color:#B76E79;
 	transition:all 0.5s;
 	-moz-transition: all 0.5s;
 	-o-transition: all 0.5s;
@@ -198,15 +198,15 @@ a.btn-down:hover {
 a.btn-order {
 	height: 50px;
 	width: 50px;
-	color: #e73131;
-	border: 2px solid #e73131;
+	color: #B76E79;
+	border: 2px solid #B76E79;
 	padding: 3% 5%;
 	font-size: 15px;
 	position: relative;
 	top: 5px;
 }
 a.btn-order:hover {
-	background:#e73131;
+	background:#B76E79;
 	color:#fff;
 	transition:all 0.5s;
 	-moz-transition: all 0.5s;
@@ -214,13 +214,13 @@ a.btn-order:hover {
 	-webkit-transition: all 0.5s;
 }
 a.btn-send {
-	color: #e73131;
-	border: 2px solid #e73131;
+	color: #B76E79;
+	border: 2px solid #B76E79;
 	padding: 2% 0%;
 	font-size: 15px;
 }
 a.btn-send:hover {
-	background:#e73131;
+	background:#B76E79;
 	color:#fff;
 	transition:all 0.5s;
 	-moz-transition: all 0.5s;
@@ -235,7 +235,7 @@ a.btn-send:hover {
 }
 a.navbar-brand img {
 	position:relative;
-	top:9px;
+	top:-5px;
 }
 #menu {
 	position:absolute;
@@ -253,11 +253,11 @@ a.navbar-brand img {
 	color: #fff;
 }
 #menu ul.nav li a:hover, #menu ul.nav li a.active {
-	color:#e73131;
+	color:#B76E79;
 	transition:all 0.4s;
 }
 #menu .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-	color:#e73131;
+	color:#B76E79;
 	background:transparent;
 }
 a.navbar-brand {
@@ -325,7 +325,7 @@ ul.nav li.active a:before {
 	line-height:27px;
 }
 .home-carousel-left, .home-carousel-right {
-	background-color: #e73131;
+	background-color: #B76E79;
 	color:#fff;
 	font-size: 32px;
 	height: 40px;
@@ -421,7 +421,7 @@ ul.nav li.active a:before {
 }
 /*Background-stylesheets-include-here*/
 .bg-sec {
-	background:#e73131;
+	background:#B76E79;
 	margin-top:10px;
 	padding: 1% 0%;
 }
@@ -460,13 +460,13 @@ ul.nav li.active a:before {
 	text-align: center;
 	width: 64px;
 	border-radius: 100%;
-	color: #e73131;
+	color: #B76E79;
 	border:1px solid #d7d7d7;
 	transition: background-color 400ms, background-color 400ms;
 	position: relative;
 }
 .media.service-box:hover .pull-left > i {
-	background:#e73131;
+	background:#8FA3BF;
 	color:#fff;
 	transform:rotateY(360deg);
 	-moz-transform:rotate(360deg);
@@ -477,6 +477,19 @@ ul.nav li.active a:before {
 	-o-transition: all 0.8s;
 	-webkit-transition: all 0.8s;
 }
+/* Solo los párrafos de descripción dentro de .service-box */
+.features-sec .service-box .media-body > p {
+  /* Opción A: alineado a la izquierda sin huecos */
+  text-align: left !important;
+}
+
+/* Si prefieres justificado pero con hyphens y menos huecos: */
+.features-sec .service-box .media-body > p {
+  text-align: justify !important;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
 .media-body h5 {
 	font-weight:bolder;
 	text-align:left;
@@ -503,7 +516,7 @@ ul.nav li.active a:before {
 	padding-right: 12px;
 	font-size: 12px;
 	font-weight: 600;
-	background:#e73131;
+	background:#8FA3BF;
 }
 .progress .progress-bar.six-sec-ease-in-out {
 	-webkit-transition: width 2s ease-in-out;
@@ -528,7 +541,7 @@ ul.nav li.active a:before {
 }
 #features .nav-tabs > li.active > a, #features .nav-tabs > li.active > a:hover, #features .nav-tabs > li.active > a:focus {
 	box-shadow: 0 1px 4px rgba(0, 0, 0, .26);
-	border-bottom:2px solid #e73131;
+	border-bottom:2px solid #B76E79;
 	background:#f8f8f8;
 }
 #features .nav-tabs > li > a {
@@ -549,7 +562,7 @@ ul.nav li.active a:before {
 	font-size:25px;
 }
 #features .nav-tabs > li.active > a i.fa {
-	color:#e73131;
+	color:#8FA3BF;
 }
 #features .nav-tabs > li > a:hover {
 	border-color:transparent;
@@ -599,7 +612,7 @@ ul.nav li.active a:before {
 	position: relative;
 }
 #portfolio .portfolio-filter > li a:hover, #portfolio .portfolio-filter > li a.active {
-	background: #e73131;
+	background: #8FA3BF;
 	color: #fff;
 	-webkit-transition-duration: 0.5s;
 	-moz-transition-duration: 0.5s;
@@ -619,7 +632,7 @@ ul.nav li.active a:before {
 	margin-left: -10px;
 	border-width: 10px;
 	border-style: solid;
-	border-color: #e73131 transparent transparent transparent;
+	border-color: #8FA3BF transparent transparent transparent;
 }
 #portfolio .portfolio-filter > li:first-child a {
 	border-radius: 4px 0 0 4px;
@@ -656,7 +669,7 @@ ul.nav li.active a:before {
 }
 #portfolio .portfolio-item:hover .portfolio-info i.fa {
 	font-size:30px;
-	color:#e73131;
+	color:#B76E79;
 }
 /* Start: Recommended Isotope styles */
 /**** Isotope Filtering ****/
@@ -747,9 +760,9 @@ ul.nav li.active a:before {
 	display: inline-block;
 	width: 116px;
 	height: 116px;
-	background-image: -moz-linear-gradient(90deg, #e73131 0%, #e73131 100%);
-	background-image: -webkit-linear-gradient(90deg, #e73131 0%, #e73131 100%);
-	background-image: -ms-linear-gradient(90deg, #e73131 0%, #e73131 100%);
+	background-image: -moz-linear-gradient(90deg, #8FA3BF 0%, #8FA3BF 100%);
+	background-image: -webkit-linear-gradient(90deg, #B76E79 0%, #B76E79 100%);
+	background-image: -ms-linear-gradient(90deg, #B76E79 0%, #B76E79 100%);
 	color: #fff;
 	border-radius: 100px;
 	border: 5px solid #f6f6f6;
@@ -785,66 +798,7 @@ ul.nav li.active a:before {
 #pricing ul.pricing.featured li.plan-header .plan-name {
 	color: #fff;
 }
-/*Team-stylesheets-include-here*/
-#team {
-	text-align:center;
-	padding:2% 0%;
-}
-.team-desc {
-	padding:15px 10px 15px 10px;
-}
-.team-main-sec:hover {
-	box-shadow: 0 8px 8px rgba(0, 0, 0, .26);
-	-webkit-transition-duration: 0.3s;
-	-moz-transition-duration: 0.3s;
-	-ms-transition-duration: 0.3s;
-	-o-transition-duration: 0.3s;
-	transition-duration: 0.3s;
-}
-.team-sec {
-	border:1px solid #eee;
-}
-.team-main-sec:hover .team-sec {
-	border:1px solid #fff;
-	-webkit-transition-duration: 0.3s;
-	-moz-transition-duration: 0.3s;
-	-ms-transition-duration: 0.3s;
-	-o-transition-duration: 0.3s;
-	transition-duration: 0.3s;
-}
-.team-main-sec:hover h5 {
-	color:#e73131;
-}
-.team-sec h5 {
-	color:#555;
-	text-transform:uppercase;
-}
-.team-social-icon {
-	margin-top:20px;
-}
-.team-desc ul.team-social-icon li {
-	display:inline-block;
-	padding-right:20px;
-}
-.team-desc ul.team-social-icon li a i.fa {
-	font-size:20px;
-	color:#999;
-}
-.team-desc ul.team-social-icon li a i.fa:hover.fa-facebook-f {
-	color:#3b5998;
-}
-.team-desc ul.team-social-icon li a i.fa:hover.fa-twitter {
-	color:#55acee;
-}
-.team-desc ul.team-social-icon li a i.fa:hover.fa-pinterest-p {
-	color:#bd081c;
-}
-.team-desc ul.team-social-icon li a i.fa:hover.fa-instagram {
-	color:#3f729b;
-}
-.team-desc ul.team-social-icon li a i.fa:hover.fa-google-plus {
-	color:#dc4e41;
-}
+
 /*Testimonials-stylesheets-include-here*/
 #testimonials {
 	background-image:url(../images/Testimonials/01.jpg);
@@ -852,7 +806,7 @@ ul.nav li.active a:before {
 	text-align:center;
 }
 #testimonials .owl-theme .owl-controls .owl-page span{
-background:#e73131;
+background:#B76E79;
 }
 .quote {
 	position:relative;
@@ -921,7 +875,7 @@ background:#e73131;
 	float:left;
 }
 .blog-info h6:hover, .blog-info h5:hover {
-	color:#e73131;
+	color:#B76E79;
 	-webkit-transition-duration: 0.3s;
 	-moz-transition-duration: 0.3s;
 	-ms-transition-duration: 0.3s;
@@ -987,65 +941,333 @@ a.btn-blg:hover {
 	-webkit-transition: all 0.8s;
 }
 /*Contact-stylesheets-include-here*/
-#contact {
-	text-align:center;
-	padding:3% 0% 0% 2%;
+/* ——————————————————————————————————————————————
+   CONTACT SECTION
+   —————————————————————————————————————————————— */
+.contact-section {
+  padding: 4rem 1rem;
+  background: #fff;
+  text-align: center;
 }
-.contact-sec-1 {
-	text-align:left;
+.contact-section .container {
+  max-width: 600px;
+  margin: 0 auto;
 }
-.contact-sec-1 h4 {
-	font-weight:bold;
+
+/* — Header */
+.contact-header h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: .5rem;
 }
-.contact-sec-1 ul.contact-form li i.fa {
-	color:#666;
-	float:left;
-	margin-right:10px;
+.contact-header span {
+  color: #B76E79;
 }
-.contact-sec-1 ul.contact-form li h6 {
-	font-size:14px;
-	color:#666;
-	margin:0;
+.contact-header .underline {
+  width: 60px;
+  height: 3px;
+  background: #B76E79;
+  margin: .5rem auto 1.5rem;
 }
-.contact-sec-1 ul {
-	padding:0;
-	position: relative;
-	top: 20px;
+.contact-header p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
 }
-.contact-sec-1 ul li {
-	display:block;
-	padding-bottom: 30px;
+
+/* — Form wrapper */
+.contact-form-wrapper {
+  margin-top: 2rem;
+  text-align: left;
 }
-.contact-sec-1 ul li a {
-	color:#666;
+
+/* — Form row: dos columnas */
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
-.contact-sec-1 ul li a:hover {
-	color:#e73131;
-	-webkit-transition-duration: 0.3s;
-	-moz-transition-duration: 0.3s;
-	-ms-transition-duration: 0.3s;
-	-o-transition-duration: 0.3s;
-	transition-duration: 0.3s;
+.form-row .form-group {
+  flex: 1;
 }
-label {
-	font-size:15px;
-	font-weight:normal;
-	float:left;
-	margin:0px 0px 20px 0px;
+
+/* — Controles de formulario (inputs y textarea) */
+.form-group .form-control,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ddd;
+  border-radius: 0;
+  padding: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  transition: border-color .2s;
 }
-.form-group {
-	margin-bottom: 30px;
+.form-group .form-control:focus,
+.form-group textarea:focus {
+  border-color: #B76E79;
+  outline: none;
 }
-textarea.form-control {
-	min-height: 120px;
-	resize: none;
+
+/* — Placeholder */
+.form-control::placeholder,
+textarea::placeholder {
+  font-size: 1.1rem;
+  color: #999;
+  opacity: 1;
 }
-.form-control {
-	border: 1px solid #ccc;
-	height: 35px;
-	border-radius: 0;
-	box-shadow: none;
+
+/* — Input‑group para Teléfono */
+.input-group {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1rem;
+} /* ← Cerramos bien el bloque */
+
+/* Prefijo +569 */
+.input-group .input-prefix {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: #f0f0f0;
+  border: 2px solid #ddd;
+  border-right: none;
+  padding: 1rem;
+  font-size: 1.1rem;       /* Aumenta tamaño de texto */
+  line-height: 1.4;
+  color: #555;
+  height: calc(1.1rem * 1.4 + 2rem);
+  min-width: 70px;
+  border-radius: 4px 0 0 4px;
 }
+
+/* Campo de teléfono */
+.input-group .form-control {
+  flex: 1;
+  box-sizing: border-box;
+  border: 2px solid #ddd;
+  border-left: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  height: calc(1.1rem * 1.4 + 2rem);
+  border-radius: 0 4px 4px 0;
+  transition: border-color .2s;
+}
+.input-group .form-control:focus {
+  border-color: #B76E79;
+  outline: none;
+}
+
+/* — Botón “Enviar” */
+.btn-send {
+  width: 100%;
+  background: #B76E79;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 1rem;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background .2s, transform .1s;
+  margin-top: 1rem;
+}
+.btn-send:hover {
+  background: #A35B67;
+  transform: translateY(-2px);
+}
+.btn-send:active {
+  background: #8E4C58;
+  transform: translateY(0);
+}
+
+/* — Mensajes de validación */
+.invalid-feedback {
+  display: none;
+  font-size: .9rem;
+  color: #d9534f;
+  margin-top: .25rem;
+}
+.needs-validation.was-validated .form-control:invalid ~ .invalid-feedback,
+.needs-validation.was-validated .input-group .form-control:invalid ~ .invalid-feedback {
+  display: block;
+}
+
+/* — Responsive */
+@media (max-width: 576px) {
+  .form-row {
+    flex-direction: column;
+  }
+  .form-row .form-group {
+    width: 100%;
+  }
+  .contact-header h2 {
+    font-size: 1.75rem;
+  }
+  .form-control,
+  .form-group textarea,
+  .input-prefix,
+  .btn-send {
+    font-size: 1rem;
+    padding: .75rem;
+    height: auto; /* Que el calc no interfiera en móvil */
+  }
+}
+
+/* Feedback de validación */
+.invalid-feedback {
+  display: none;
+  font-size: .875rem;
+  color: #d9534f;
+}
+.was-validated .form-control:invalid ~ .invalid-feedback {
+  display: block;
+}
+.was-validated .form-control:valid ~ .invalid-feedback {
+  display: none;
+}
+
+#form-status {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: #fff;
+  border-left: 4px solid #28a745; /* verde éxito */
+  padding: 1rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  color: #333;
+  font-size: 1rem;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity .3s, transform .3s;
+  z-index: 9999;
+}
+#form-status.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+#form-status.error {
+  border-color: #d9534f; /* rojo error */
+}
+
+#form-status.success {
+  color: #28a745;
+}
+
+
+#main-contact-form .input-group .input-prefix {
+  display: flex;
+  align-items: flex-start;   /* no center, para poder usar padding-top */
+  padding: 0.9rem 1rem;       /* 0.9rem en vez de 1rem, lo ajustas hasta que quede bien */
+  font-size: 1.1rem;
+  border: 2px solid #ddd;
+  border-right: none;
+  background: #f0f0f0;
+  border-radius: 4px 0 0 4px;
+  box-sizing: border-box;
+}
+
+#main-contact-form .input-group .form-control {
+  padding: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  border: 2px solid #ddd;
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  box-sizing: border-box;
+}
+
+/* —— Unificamos el estilo de texto entre el prefijo y el input —— */
+.input-group .input-prefix,
+.input-group-addon {
+  /* Hereda la familia, peso y tamaño de letra de tu form-control */
+  font-family: inherit !important;
+  font-size: 1rem       !important;
+  font-weight: 400      !important;
+  line-height: 1.5      !important;
+
+  /* Asegura centrado vertical */
+  display: flex         !important;
+  align-items: center   !important;
+  justify-content: center !important;
+
+  /* Altura automática basada en padding + line-height */
+  height: auto          !important;
+  padding: 1rem         !important;
+}
+
+/* Y el input al lado también debe heredar idéntico */
+.input-group .form-control {
+  font-family: inherit !important;
+  font-size: 1rem      !important;
+  font-weight: 400     !important;
+  line-height: 1.5     !important;
+}
+
+/* Por si el template antiguo fuerza un height fijo de 35px */
+.input-group .input-prefix,
+.input-group .form-control {
+  height: auto !important;
+}
+/* Contenedor base de toasts */
+#form-toast-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 9999;
+}
+
+/* Toast individual */
+.form-toast {
+  display: flex;
+  align-items: center;
+  min-width: 250px;
+  max-width: 320px;
+  margin-bottom: .75rem;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  color: #fff;
+  font-size: .95rem;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity .3s, transform .3s;
+}
+
+/* Al aparecer */
+.form-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Éxito: morado/acento */
+.form-toast.success {
+  background: #5A2A83;
+  border-left: 4px solid #B76E79;
+}
+
+/* Error: rojo */
+.form-toast.error {
+  background: #d9534f;
+  border-left: 4px solid #c9302c;
+}
+
+
+/* Success & error variants */
+.form-toast.success { border-color: #28a745; }
+.form-toast.error   { border-color: #d9534f; }
+
+.form-toast .icon {
+  margin-right: .75rem;
+  font-size: 1.25rem;
+}
+.form-toast .message {
+  flex: 1;
+}
+
 /*Footer-stylesheets-include-here*/
 #footer {
 	text-align:center;
@@ -1125,7 +1347,7 @@ textarea.form-control {
   opacity: 0;
 }
 .bottom-animate {
-  background: #e73131 !important;
+  background: #B76E79 !important;
   top: 13px !important;
   -webkit-transform: rotate(-225deg);
   /* Chrome, Safari, Opera */
