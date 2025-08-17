@@ -11209,12 +11209,10 @@ textarea.form-control {
   color: #1b1b1b;
 }
 
-.navbar .navbar-brand img {
-  width: 60px;
-}
+
 
 .navbar .nav-link {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
 }
 
@@ -11469,13 +11467,13 @@ header .navbar {
   word-spacing: 10px;
   text-align: center;
   opacity: .8;
-  color: #8fa3bf;
+  color: white;
 }
 
 .header .overlay .title {
   font-size: calc(30px + (70 - 30) * ((100vw - 320px) / (1200 - 320)));
   font-weight: bold;
-  color: #8fa3bf;
+  color: white;
 }
 
 .header .shape svg {
@@ -11756,4 +11754,370 @@ header .navbar {
   left: 50%;
   opacity: 1;
   visibility: visible;
+}
+/* ====== sección ====== */
+#features{
+  padding: 48px 0 72px;         /* antes 80px arriba/abajo */
+  scroll-margin-top: 90px;      /* mejor anclado al hacer click en el menú */
+}
+#features .wrap{
+  width:min(1120px, 92%);
+  margin:0 auto;
+}
+
+
+
+/* encabezado */
+#features .head{
+  text-align:center;
+  margin-bottom:16px;
+}
+
+#features .head h2{
+  margin:0;
+  font-weight:800;
+  letter-spacing:.06em;
+  color:var(--ink-2);
+}
+#features .head h2 span{ color:var(--brand); }
+#features .head .underline{
+  width:90px; 
+  height:4px; 
+  margin:10px auto 12px;
+  background:
+     linear-gradient(90deg,var(--brand) 0 60%, #d6d8db 60% 100%);
+  border-radius:4px;
+}
+#features .head .sub{
+  margin:0 auto;
+  color:var(--muted-2);
+  line-height:1.7;
+  max-width:780px;
+}
+
+/* ====== Tabs ====== */
+#features .tabs{ margin-top:26px; }
+
+/* oculta radios */
+#features .tabs input[type="radio"]{ position:absolute; opacity:0; pointer-events:none; }
+
+/* botones */
+#features .tab-buttons{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:0;
+  width:min(720px,100%);
+  margin:18px auto 26px;
+  border:1px solid var(--line);
+  border-right:none;
+  background:#fff;
+  overflow:hidden;
+  border-radius:8px;
+}
+#features .tab-buttons label{
+  height:80px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:26px; color:var(--muted);
+  background:var(--card);
+  border-right:1px solid var(--line);
+  position:relative;
+  cursor:pointer;
+  transition:background .2s, color .2s, box-shadow .2s;
+}
+#features .tab-buttons label:hover{
+  background:#fafafa; color:#374151;
+}
+
+/* activo: línea inferior y color */
+#tab-1:checked ~ .tab-buttons label[for="tab-1"],
+#tab-2:checked ~ .tab-buttons label[for="tab-2"],
+#tab-3:checked ~ .tab-buttons label[for="tab-3"]{
+  color:var(--brand);
+  box-shadow:var(--shadow);
+}
+#tab-1:checked ~ .tab-buttons label[for="tab-1"]::after,
+#tab-2:checked ~ .tab-buttons label[for="tab-2"]::after,
+#tab-3:checked ~ .tab-buttons label[for="tab-3"]::after{
+  content:"";
+  position:absolute; left:0; right:0; bottom:0;
+  height:3px; background:var(--brand);
+}
+
+/* ====== Paneles ====== */
+#features .panels{ position:relative; }
+#features .panel{
+  display:none;
+  gap:32px;
+  align-items:center;
+}
+#features .panel .text{ flex:1 1 420px; }
+#features .panel .text h3{
+  margin:0 0 12px; font-size:28px; font-weight:800; color:var(--ink);
+}
+#features .panel .mini-underline{
+  width:72px; height:3px; background:var(--brand); border-radius:2px; margin:0 0 18px;
+}
+#features .panel .text p{
+  color:var(--muted-2);
+  line-height:1.8;
+  margin:0 0 12px;
+}
+#features .panel .media{ flex:1 1 420px; }
+#features .panel .media img{
+  border-radius:12px;
+  box-shadow:var(--shadow);
+}
+
+/* mostrar el panel activo (mapea con data-for) */
+#tab-1:checked ~ .panels .panel[data-for="tab-1"],
+#tab-2:checked ~ .panels .panel[data-for="tab-2"],
+#tab-3:checked ~ .panels .panel[data-for="tab-3"]{
+  display:flex;
+}
+
+/* ====== responsive ====== */
+@media (max-width: 991px){
+  #features .panel{ flex-direction:column; }
+  #features .tab-buttons label{ height:68px; font-size:22px; }
+  #features .panel .text h3{ font-size:24px; }
+}
+@media (max-width: 575px){
+  #features .tab-buttons{ border-radius:6px; }
+  #features .tab-buttons label{ height:64px; font-size:20px; }
+  #features .head h2{ font-size:28px; letter-spacing:.04em; }
+}
+
+/* ===== NAVBAR: logo ocupa el alto y el menú queda más arriba ===== */
+
+/* quita acolchado del nav base que generaba aire extra */
+.navbar.custom-navbar{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.lm-navbar{
+  background:#fff !important;
+  border-bottom:1px solid rgba(0,0,0,.06);
+  box-shadow:0 6px 24px rgba(0,0,0,.04);
+  padding-top:0;
+  padding-bottom:0;
+}
+
+/* contenedor en columna sin separación vertical extra */
+.lm-navbar .container.flex-column{
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  align-items:center;
+}
+
+/* bloque del logo (ajústalo si quieres más/menos alto) */
+.lm-navbar .navbar-brand{
+  height:110px;              /* prueba 100–120px a gusto */
+  margin:0;
+  padding:0;
+  line-height:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* la imagen rellena ese bloque sin deformarse */
+.lm-navbar .navbar-brand img,
+.navbar.custom-navbar .navbar-brand img,
+.navbar .navbar-brand .brand-logo{
+  height:100%;
+  width:auto !important;
+  object-fit:contain;
+  display:block;
+}
+
+/* pega el menú al logo */
+.lm-navbar .navbar-collapse{ margin-top:0; }
+
+/* menú */
+.lm-navbar .navbar-nav{ align-items:center; }
+.lm-navbar .navbar-nav .nav-link{
+  padding:.75rem 1.25rem;
+  font-weight:600;
+  color:#444;
+}
+.lm-navbar .navbar-nav .nav-link:hover,
+.lm-navbar .navbar-nav .nav-link.active{
+  color:#8fa3bf;
+}
+
+/* móvil */
+@media (max-width:576px){
+  .lm-navbar .navbar-brand{ height:72px; }
+  .lm-navbar .navbar-nav .nav-link{ padding:.65rem 1rem; }
+}
+
+/* ===== About: tipografía compacta + acento #8fa3bf (sin subrayado en texto) ===== */
+#about{
+  --ink:#1f2937;          /* títulos */
+  --muted:#4b5563;        /* párrafos */
+  --accent:#8fa3bf;       /* acento */
+}
+
+/* Título y subtítulo */
+#about .section-title{
+  font-size:32px;
+  font-weight:800;
+  letter-spacing:-.01em;
+  color:var(--ink);
+  margin-bottom:8px;
+}
+#about .section-subtitle{
+  font-size:14px;
+  font-weight:700;
+  color:var(--accent);
+  letter-spacing:.02em;
+  margin-bottom:20px;
+}
+
+/* Párrafos */
+#about p{
+  font-size:16px;
+  line-height:1.75;
+  color:var(--muted);
+  margin:0 0 12px;
+}
+/* Primer párrafo un poco más prota */
+#about .pr-md-5 p:first-of-type{
+  font-size:16.5px;
+  color:#374151;
+}
+
+/* Énfasis SIN subrayado/marker */
+#about p strong{
+  font-weight:800;
+  color:#0f172a;
+  background:none;          /* ← quitado el efecto de “resaltado” */
+  text-decoration:none;     /* ← por si acaso */
+}
+
+/* Subtítulo columna derecha */
+#about h6.mb-3{
+  font-size:18px;
+  font-weight:800;
+  color:var(--ink);
+  margin:10px 0 10px;
+  position:relative;
+}
+#about h6.mb-3::after{
+  content:"";
+  display:block;
+  width:68px; height:3px;
+  background:var(--accent);
+  border-radius:2px;
+  margin-top:6px;
+}
+
+/* Imágenes */
+#about img.w-100{
+  border-radius:12px;
+  box-shadow:0 12px 28px rgba(2,8,20,.07);
+}
+#about .shadow-sm{
+  box-shadow:0 8px 18px rgba(2,8,20,.06) !important;
+}
+
+/* Espaciado del bloque de texto derecho */
+#about .pl-md-5 .col-12{ margin-top:18px; }
+
+/* Responsive */
+@media (max-width:991px){
+  #about .section-title{ font-size:28px; }
+  #about .section-subtitle{ font-size:13.5px; }
+}
+@media (max-width:575px){
+  #about .section-title{ font-size:26px; }
+  #about p{ font-size:15px; line-height:1.75; }
+}
+/* ====== SERVICES / FEATURES ====== */
+#features .wrap{max-width:1160px;margin:0 auto;padding:40px 24px;}
+#features .head h2{letter-spacing:.04em}
+
+/* Botonera de iconos (con “tarjetitas”) */
+#features .tabs{margin-top:.5rem}
+#features .tab-buttons{
+  display:flex; justify-content:center; gap:18px;
+  margin:18px 0 28px;
+}
+#features .tab-buttons label{
+  width:92px; height:76px;
+  display:flex; align-items:center; justify-content:center;
+  border:1px solid rgba(0,0,0,.08);
+  border-radius:14px; background:#fff; color:#8fa3bf;
+  box-shadow:0 8px 18px rgba(0,0,0,.06);
+  cursor:pointer; transition:.25s ease;
+}
+#features .tab-buttons label i{font-size:30px; line-height:1}
+#features .tab-buttons label:hover{transform:translateY(-2px)}
+
+
+
+/* Activo según el radio seleccionado */
+#tab-1:checked ~ .tab-buttons label[for="tab-1"],
+#tab-2:checked ~ .tab-buttons label[for="tab-2"],
+#tab-3:checked ~ .tab-buttons label[for="tab-3"]{
+  background:#8fa3bf; color:#fff;
+  box-shadow:0 12px 28px rgba(143,163,191,.35);
+  transform:translateY(-3px);
+}
+
+/* Mostrar/ocultar paneles */
+#features .panels .panel{display:none}
+#tab-1:checked ~ .panels #panel-1{display:grid}
+#tab-2:checked ~ .panels #panel-2{display:grid}
+#tab-3:checked ~ .panels #panel-3{display:grid}
+
+/* Layout del panel activo: texto izquierda + imagen derecha */
+#features .panels .panel{
+  grid-template-columns: 1.25fr .9fr; /* imagen a la derecha */
+  align-items:center; gap:48px;
+}
+
+/* Tipos y detalles */
+#features .panels .panel .text h3{
+  font-weight:700; font-size:28px; margin:0 0 4px;
+}
+#features .panels .panel .text p{
+  font-size:16px; line-height:1.75; color:#4a4a4a;
+}
+#features .panels .panel .mini-underline{
+  width:60px; height:3px; border-radius:999px;
+  background:#8fa3bf; margin:10px 0 18px;
+}
+
+/* Imagen grande, limpia y alineada */
+#features .panels .panel .media img{
+  width:100%; height:380px;           /* ← más grande */
+  object-fit:cover; border-radius:16px;
+  box-shadow:0 16px 32px rgba(0,0,0,.12);
+}
+
+/* Responsive */
+@media (max-width: 992px){
+  #features .panels .panel{gap:32px}
+  #features .tab-buttons label{width:84px; height:70px}
+}
+@media (max-width: 768px){
+  #features .panels .panel{
+    grid-template-columns: 1fr;       /* apilado */
+  }
+  #features .panels .panel .media img{height:300px}
+}
+
+
+
+
+/* Tablet y móvil: centrado y sin márgenes laterales */
+@media (max-width: 991.98px){
+  #features .tab-buttons{
+    justify-content:center;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 }
