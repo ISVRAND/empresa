@@ -12121,3 +12121,7 @@ header .navbar {
     margin-right: 0 !important;
   }
 }
+/* Subir un poco la sección de servicios */
+#features {
+  margin-top: -50px; /* ajusta el valor (-20, -30, -50) según lo que quieras */
+}
