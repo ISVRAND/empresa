@@ -12206,3 +12206,86 @@ header .navbar {
   display: block;
   border-radius: 6px;  /* opcional, esquinas redondeadas */
 }
+
+/* Botón estilo Claro */
+.btn-cta {
+  background-color: #8fa3bf;   /* Cambia por tu color corporativo */
+  color: #fff !important;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;       /* hace que sea pill */
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;                 /* espacio entre icono y texto */
+  border: none;
+  transition: all 0.25s ease;
+}
+
+.btn-cta:hover {
+  background-color: #8fa3bf;  /* un tono más oscuro */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+/* Lightbox minimal */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 4vh 2vw;
+}
+.lightbox.is-open { display: flex; }
+
+.lightbox__img {
+  max-width: 92vw;
+  max-height: 88vh;
+  border-radius: 10px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.35);
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 16px;
+  right: 22px;
+  font-size: 32px;
+  color: #fff;
+  cursor: pointer;
+  line-height: 1;
+  user-select: none;
+  transition: opacity .2s ease;
+}
+.lightbox__close:hover { opacity: .85; }
+
+
+
+
+/* La cortina ocupa la tarjeta pero NO bloquea eventos por defecto */
+.portfolio-item .content-holder{
+  position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:center;
+  background: rgba(13,27,42,.35);           /* tu overlay */
+  opacity:0; transition: opacity .25s ease;
+  pointer-events: none;                      /* <- deja pasar clicks */
+}
+
+/* El link invisible que SI recibe el click (cubre toda la tarjeta) */
+.portfolio-item .content-holder .img-popup{
+  position:absolute; inset:0;
+  display:block;
+  pointer-events: auto;                      /* <- recibe el click */
+  z-index:2;
+}
+
+/* Texto centrado encima */
+.portfolio-item .content-holder .text-holder{
+  position:relative; z-index:3;
+  color:#fff; text-align:center;
+  pointer-events: none;                      /* no roba el click */
+}
+
+/* Efecto hover */
+.portfolio-item:hover .content-holder{ opacity:1; }
